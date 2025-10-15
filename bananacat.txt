@@ -18,6 +18,9 @@ local v16 = {
     Sea = v15:AddTab({
         Title = "Sea Event"
     }),
+    voca = v15:AddTab({
+     Title = "Tab Vocalun"
+    }),
     ITM = v15:AddTab({
         Title = "Tab Farming Other"
     }),
@@ -9614,4 +9617,5 @@ task.spawn(function()
         end
     end
 end)
+
 
