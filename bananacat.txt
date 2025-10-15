@@ -720,6 +720,48 @@ function CheckLevel()
             NameMon = "Skull Slayer";
             CFrameQ = CFrame.new(- 16665.19140625, 104.59640502929688, 1579.6943359375);
             CFrameMon = CFrame.new(- 16811.5703125, 84.625244140625, 1542.235107421875);
+         elseif ((MyLevel == 2600) or (MyLevel <= 2625)) then
+			Mon = "Reef Bandit";
+			LevelQuest = 1;
+			NameQuest = "SubmergedQuest1";
+			NameMon = "Reef Bandit";
+			CFrameQuest = CFrame.new( 10777.97, -2087.73, 9259.77);
+			CFrameMon = CFrame.new( 10953.86, -2158.77, 9170.27);
+         elseif ((MyLevel == 2625) or (MyLevel <= 2650)) then
+			Mon = "Coral Pirate";
+			LevelQuest = 2;
+			NameQuest = "SubmergedQuest1";
+			NameMon = "Coral Pirate";
+			CFrameQuest = CFrame.new( 10777.97, -2087.73, 9259.77);
+			CFrameMon = CFrame.new( 10729.17, -2087.73, 9342.57);
+         elseif ((MyLevel == 2650) or (MyLevel <= 2675)) then
+			Mon = "Sea Chanter";
+			LevelQuest = 2;
+			NameQuest = "SubmergedQuest2";
+			NameMon = "Sea Chanter";
+			CFrameQuest = CFrame.new( 10884.94, -2086.20, 10036.44);
+			CFrameMon = CFrame.new( 10837.59, -2087.73, 10008.18);
+         elseif ((MyLevel == 2675) or (MyLevel <= 2700)) then
+			Mon = "Ocean Prophet";
+			LevelQuest = 2;
+			NameQuest = "SubmergedQuest2";
+			NameMon = "Ocean Prophet";
+			CFrameQuest = CFrame.new( 10884.94, -2086.20, 10036.44);
+			CFrameMon = CFrame.new( 11023.65, -2001.51, 10137.16);
+         elseif ((MyLevel == 2700) or (MyLevel <= 2725)) then
+			Mon = "High Disciple";
+			LevelQuest = 1;
+			NameQuest = "SubmergedQuest3";
+			NameMon = "High Disciple";
+			CFrameQuest = CFrame.new( 9639.39, -1992.45, 9617.28);
+			CFrameMon = CFrame.new( 9839.68, -1993.59, 9685.66);
+         elseif ((MyLevel == 2725) or (MyLevel <= 2800)) then
+			Mon = "Grand Devotee";
+			LevelQuest = 2;
+			NameQuest = "SubmergedQuest3";
+			NameMon = "Grand Devotee";
+			CFrameQuest = CFrame.new( 9639.39, -1992.45, 9617.28);
+			CFrameMon = CFrame.new( 9582.31, -1993.47, 9829.67);
         end
     end
 end
@@ -816,6 +858,12 @@ elseif Sea3 then
         "Isle Champion",
         "Serpent Hunter",
         "Skull Slayer"
+        "Reef Bandit"
+        "Coral Pirate"
+        "Sea Chanter"
+        "Ocean Prophet"
+        "High Disciple"
+        "Grand Devotee"
     };
 end
 if Sea1 then
@@ -9026,4 +9074,5 @@ spawn(function()
         end
     end
 end);
+
 
