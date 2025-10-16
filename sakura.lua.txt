@@ -135,19 +135,19 @@ local plr = game:GetService("Players").LocalPlayer
 local Notification = require(game:GetService("ReplicatedStorage").Notification)
 
 -- Thông báo chào mừng
-Notification.new("<Color=Yellow>Mùng Hai Tháng Chín rợp cờ,<Color=/>"):Display()
+Notification.new("<Color=Yellow>Tham gia ngay sever discorc của Sakura,<Color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow>Non sông gấm vóc đợi chờ vươn xa.<Color=/>"):Display()
+Notification.new("<Color=Yellow>nhận cày thuê blox fruits,<color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow>Máu hồng bao thuở ông cha,<Color=/>"):Display()
+Notification.new("<Color=Yellow>hãy sử dụng dich vụ của chúng tôi,<Color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow>Cho nay đất Việt ngọc ngà sáng tươi.<Color=/>"):Display()
+Notification.new("<Color=Yellow>tôi yêu việt nam.<Color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow><Chúc Mừng Ngày Quốc Khánh><Color=/>"):Display()
+Notification.new("<Color=Yellow><cali con cặc><Color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow>Mùng 2 Tháng 9<Color=/>"):Display()
+Notification.new("<Color=Yellow>cali ngu<Color=/>"):Display()
 task.wait(1)
-Notification.new("<Color=Yellow>HNC Roblox<Color=/>"):Display()
+Notification.new("<Color=Yellow>Sakura hub mãi đỉnh<Color=/>"):Display()
 task.wait(5)
 -- Anh em đổi thông báo ở trên nha vd: Notification.new("<Color=White>đổi thông báo chỗ này nè!<Color=/>"):Display()
 -- LocalScript (đặt trong StarterPlayerScripts)
@@ -157,7 +157,7 @@ local RunService = game:GetService("RunService")
 local player = Players.LocalPlayer
 
 -- Tùy chỉnh
-local TEXT = "Fast Attack By HNC Roblox"
+local TEXT = "Sakura hub"
 local TEXT_SIZE = 14                 -- kích thước chữ (không quá to)
 local GUI_OFFSET = Vector3.new(0, 1.8, 0) -- khoảng cách so với đầu
 local RAINBOW_SPEED = 1.0           -- tốc độ đổi màu (1 = bình thường, tăng để nhanh hơn)
@@ -172,7 +172,7 @@ local function createBillboardFor(character)
     if existing then existing:Destroy() end
 
     local billboard = Instance.new("BillboardGui")
-    billboard.Name = "HNC_FastAttack_Label"
+    billboard.Name = "Sakura_FastAttack_Label"
     billboard.Adornee = head
     billboard.AlwaysOnTop = true
     billboard.Size = UDim2.new(0, 200, 0, 40) -- kích thước GUI
@@ -1255,6 +1255,13 @@ elseif (MyLevel >= 2675 and MyLevel <= 2750) or SelectMonster == "Ocean Prophet"
     NameMon = "Ocean Prophet"
     CFrameQuest = CFrame.new(10612.3848, -2087.844, 10053.8926)
     CFrameMon   = CFrame.new(11056.1445, -2001.6717, 10117.4493)
+elseif ((MyLevel == 2750) or (MyLevel <= 2800)) then
+	Mon = "Grand Devotee";
+	LevelQuest = 1;
+	NameQuest = "SubmergedQuest3";
+	NameMon = "Grand Devotee";
+	CFrameQuest = CFrame.new( 9639.39, -1992.45, 9617.28);
+	CFrameMon = CFrame.new( 9582.31, -1993.47, 9829.67);
             end
         end
     end
