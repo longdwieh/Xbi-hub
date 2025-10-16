@@ -5058,6 +5058,7 @@ local Window = library:NaJa()
 
 local Main = Window:Tab("General","14477284625")
 local AutoQuest = Window:Tab("Items Quest","11446859498")
+local levi = window:Tab("leviathan","10734941352"
 local Events = Window:Tab("Auto Sea Event","10734941354")
 local Racer = Window:Tab("Race V4 & Esp","10747372167")
 local RaidFruit = Window:Tab("Raid & Fruits","10734975692")
