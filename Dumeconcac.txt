@@ -1,0 +1,131 @@
+-- Forge Hub Style UI | by ChatGPT
+-- Chỉ giao diện, không có chức năng exploit
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "ForgeHubUI"
+gui.ResetOnSpawn = false
+
+-- Frame chính
+local main = Instance.new("Frame", gui)
+main.Size = UDim2.new(0, 720, 0, 420)
+main.Position = UDim2.new(0.5, -360, 0.3, 0)
+main.BackgroundColor3 = Color3.fromRGB(24, 38, 27) -- xanh rêu đậm
+main.BorderSizePixel = 0
+Instance.new("UICorner", main).CornerRadius = UDim.new(0, 8)
+
+-- Thanh tiêu đề
+local top = Instance.new("Frame", main)
+top.Size = UDim2.new(1, 0, 0, 32)
+top.BackgroundColor3 = Color3.fromRGB(30, 45, 35)
+top.BorderSizePixel = 0
+local topCorner = Instance.new("UICorner", top)
+topCorner.CornerRadius = UDim.new(0, 8)
+
+local title = Instance.new("TextLabel", top)
+title.Text = "Anya Hub | Blox Fruits [BETA]"
+title.Font = Enum.Font.GothamSemibold
+title.TextSize = 15
+title.TextColor3 = Color3.fromRGB(220, 220, 220)
+title.BackgroundTransparency = 1
+title.Size = UDim2.new(1, -20, 1, 0)
+title.Position = UDim2.new(0, 10, 0, 0)
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+local author = Instance.new("TextLabel", top)
+author.Text = "by Sakura"
+author.Font = Enum.Font.Gotham
+author.TextSize = 14
+author.TextColor3 = Color3.fromRGB(130, 130, 130)
+author.BackgroundTransparency = 1
+author.Size = UDim2.new(0, 150, 1, 0)
+author.Position = UDim2.new(1, -160, 0, 0)
+author.TextXAlignment = Enum.TextXAlignment.Right
+
+-- Thanh bên trái (menu)
+local sidebar = Instance.new("Frame", main)
+sidebar.Size = UDim2.new(0, 150, 1, -32)
+sidebar.Position = UDim2.new(0, 0, 0, 32)
+sidebar.BackgroundColor3 = Color3.fromRGB(20, 35, 25)
+sidebar.BorderSizePixel = 0
+
+Instance.new("UICorner", sidebar).CornerRadius = UDim.new(0, 6)
+
+local buttons = {"Home", "Farming", "Player", "Misc", "Settings"}
+local icons = {"🏠","🚜","👤","📦","⚙️"}
+
+for i, name in ipairs(buttons) do
+	local btn = Instance.new("TextButton", sidebar)
+	btn.Size = UDim2.new(1, 0, 0, 40)
+	btn.Position = UDim2.new(0, 0, 0, (i - 1) * 42 + 10)
+	btn.Text = icons[i] .. "  " .. name
+	btn.Font = Enum.Font.Gotham
+	btn.TextSize = 16
+	btn.TextColor3 = Color3.fromRGB(230, 230, 230)
+	btn.BackgroundColor3 = (name == "Farming") and Color3.fromRGB(35, 60, 40) or Color3.fromRGB(20, 35, 25)
+	btn.AutoButtonColor = false
+	Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+end
+
+-- Khung nội dung (phần Farming)
+local content = Instance.new("Frame", main)
+content.Size = UDim2.new(1, -170, 1, -52)
+content.Position = UDim2.new(0, 160, 0, 42)
+content.BackgroundTransparency = 1
+
+local title2 = Instance.new("TextLabel", content)
+title2.Text = "Farming"
+title2.Font = Enum.Font.GothamBold
+title2.TextSize = 28
+title2.TextColor3 = Color3.fromRGB(240, 240, 240)
+title2.BackgroundTransparency = 1
+title2.Size = UDim2.new(1, 0, 0, 40)
+title2.Position = UDim2.new(0, 0, 0, 0)
+title2.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Hàm tạo các hàng tuỳ chọn
+local function createOption(y, name, desc)
+	local frame = Instance.new("Frame", content)
+	frame.Size = UDim2.new(1, -20, 0, 60)
+	frame.Position = UDim2.new(0, 0, 0, y)
+	frame.BackgroundColor3 = Color3.fromRGB(25, 40, 30)
+	frame.BorderSizePixel = 0
+	Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 6)
+
+	local title = Instance.new("TextLabel", frame)
+	title.Text = name
+	title.Font = Enum.Font.GothamSemibold
+	title.TextSize = 18
+	title.TextColor3 = Color3.fromRGB(230, 230, 230)
+	title.BackgroundTransparency = 1
+	title.Size = UDim2.new(0.7, 0, 0, 25)
+	title.Position = UDim2.new(0, 12, 0, 8)
+	title.TextXAlignment = Enum.TextXAlignment.Left
+
+	local descText = Instance.new("TextLabel", frame)
+	descText.Text = desc
+	descText.Font = Enum.Font.Gotham
+	descText.TextSize = 14
+	descText.TextColor3 = Color3.fromRGB(150, 150, 150)
+	descText.BackgroundTransparency = 1
+	descText.Size = UDim2.new(0.9, 0, 0, 18)
+	descText.Position = UDim2.new(0, 12, 0, 34)
+	descText.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Nút bật tắt
+	local toggle = Instance.new("Frame", frame)
+	toggle.Size = UDim2.new(0, 60, 0, 30)
+	toggle.Position = UDim2.new(1, -80, 0.5, -15)
+	toggle.BackgroundColor3 = Color3.fromRGB(15, 25, 20)
+	Instance.new("UICorner", toggle).CornerRadius = UDim.new(0, 15)
+
+	local knob = Instance.new("Frame", toggle)
+	knob.Size = UDim2.new(0, 26, 0, 26)
+	knob.Position = UDim2.new(1, -28, 0.5, -13)
+	knob.BackgroundColor3 = Color3.fromRGB(0, 170, 255) -- màu xanh sáng
+	Instance.new("UICorner", knob).CornerRadius = UDim.new(1, 0)
+end
+
+createOption(60, "Auto Farm Level", "Autofarms Quests and Mobs")
+createOption(130, "Farm Nearest Mob", "Autofarms nearest mobs")
+createOption(200, "Include Bosses", "Choose whether to include bosses")
