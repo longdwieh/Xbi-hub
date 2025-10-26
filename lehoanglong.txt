@@ -129,6 +129,7 @@ task.delay(25, function() -- ⏳ Chờ 10 giây mới bật script này
 
 end)
 pcall(function()        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhDzaiScript/Setting/refs/heads/main/FastMax.lua"))()
+end)
 local plr = game:GetService("Players").LocalPlayer
 local Notification = require(game:GetService("ReplicatedStorage").Notification)
 
